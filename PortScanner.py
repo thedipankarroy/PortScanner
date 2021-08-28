@@ -1,12 +1,10 @@
 import socket
 import termcolor
 
-
 def scan(target, ports):
     print("\n" + " Starting Scan For " + str(target))
     for port in range(1, ports):
         scan_port(target, port)
-
 
 def scan_port(ipaddress, port):
     try:
@@ -26,3 +24,5 @@ if ',' in targets:
         scan(ip_addr.strip(' '), ports)
 else:
     scan(targets, ports)
+    
+    
